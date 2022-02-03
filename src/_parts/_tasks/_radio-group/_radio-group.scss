@@ -1,0 +1,38 @@
+$bg: #fff;
+$fg: #D8E0FD;
+$borderWidth: 0.4em;
+
+.radio-group {
+    display: flex;
+    border: solid $borderWidth $bg;
+    display: inline-block;
+    border-radius: 3.1em;
+    overflow: hidden;
+    background-color: $bg;
+}
+
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.3em 1.7em;
+    border-radius: 3.1em;
+    font-family: $font-second;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1;
+    color: $color-text-title;
+}
+
+input[type="radio"]:checked + label {
+    color: #3E63F6;
+    background: $fg ;
+}
+

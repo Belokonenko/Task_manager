@@ -1,0 +1,8 @@
+@import "../_base/var";
+
+.btn {
+  background-color: $color-light;
+  box-shadow: 0 0.25rem 1.25rem rgba(51, 61, 72, 0.06);
+  border-radius: 0.7em;
+  border-color: transparent;
+}

@@ -1,0 +1,66 @@
+
+$color-border-tasks: #e0e3ea;
+
+.tasks-t {
+    display: grid;
+    grid-template-columns: 9em 1fr;
+    grid-template-rows: 6em 1fr;
+    border: 6px solid $color-border-tasks;
+    border-radius: 1em;
+    width: 99%;
+    height: 100%;
+
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-column: 2/-1;
+        grid-row: 1/2;
+        font-size: 1em;
+        border-bottom: 1px solid $color-border-tasks;
+
+        & li {
+            text-align: center;
+            background-color: white;
+            & p {
+                font-family: $font-second;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1rem;
+                line-height: 2;
+                color: #333d48;
+            }
+            .days-date-txt {
+                font-family: $font-second;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 0.8rem;
+                line-height: 2;
+                color: #333d48;
+            }
+        }
+    }
+
+    &__hors {
+        grid-column: 1/2;
+        grid-row: 2/-1;
+    }
+    &__hors li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-column: 2/-1;
+        grid-row: 2/-1;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(48, 1fr);
+    }
+    .cell {
+        background-color: #fff;
+        border-bottom: 1px dashed $color-border-tasks;
+        border-right: 1px solid $color-border-tasks;
+    }
+}

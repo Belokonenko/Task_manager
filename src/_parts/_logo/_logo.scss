@@ -1,0 +1,23 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: $color-bg-main;
+
+  .logo-text {
+    display: flex;
+    align-items: center; 
+    justify-self: center;
+    font-family: $font-second;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-main;
+  }
+
+  @media (max-width: 768px) {
+    grid-column: 2 / 3;
+  }
+}

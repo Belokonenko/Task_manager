@@ -1,0 +1,37 @@
+// --- base ---
+@import "../_base/normalise";
+@import "../_base/base";
+@import "../_base/var";
+// --- /base ---
+
+.task-manager {
+    display: grid;
+    grid-template-columns: 5rem max-content 1fr;
+    grid-template-rows: 5rem auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    @import "../_base/_elements/_scrol/_scrol";
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: max-content auto;
+    }
+}
+
+@import "../_parts/_logo/logo";
+@import "../_parts/_login/login";
+
+.btn-menu {
+    position: fixed;
+    top: 60px;
+    height: 2rem;
+    width: 2rem;
+    z-index: 999;
+}
+
+@import "../_parts/_menu/menu";
+@import "../_parts/_options/options";
+@import"../_parts/_tasks/tasks";
+

@@ -1,0 +1,96 @@
+@import "../../../_base/var";
+
+.calendar {
+    display: grid;
+    grid-template-rows: max-content auto;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 6em;
+        padding: 0 2rem;
+    }
+    &__month-text {
+        font-weight: bold;
+        font-size: 1.12rem;
+        line-height: 1;
+        color: #000000;
+    }
+    &__year-text {
+        font-size: 0.9rem;
+        line-height: 1;
+        color: #000000;
+        text-align: center;
+    }
+    &__body {
+        padding: 0 2rem 2.5rem 2rem;
+        margin-bottom: 1.6em;
+        border-bottom: 1px solid rgba(158, 163, 169, 0.46); 
+        &--days {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+
+            li {
+                flex: 1;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: capitalize;
+                text-align: center;
+                color: $gray;
+                margin: 0 1px;
+            }
+        }
+        &--dates {
+            display: grid;
+            gap: 3px;
+            grid-template-columns: repeat(7, 1fr);
+            justify-items: center;
+            text-align: center;
+            li {
+                position: relative;
+                width: 1.5rem;
+                height: 1.5rem;
+                display: grid;
+                place-items: center;
+                font-weight: bold;
+            }
+            li.prev,
+            li.next {
+                color: #ccc;
+            }
+            li.active {
+                background: $orange;
+                color: $white;
+                border-radius: $radius;
+            }
+            li.circle {
+                border: 2px solid;
+                border-radius: $radius;
+                span {
+                    position: absolute;
+                    top: -0.75rem;
+                    right: -0.5rem;
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    font-size: 1.2rem;
+                    color: $white;
+                    border-radius: $radius;
+                }
+            }
+            .circle.orange {
+                border-color: $orange;
+                span {
+                    background: $orange;
+                }
+            }
+            .circle.purple {
+                border-color: $purple;
+                span {
+                    background: $purple;
+                }
+            }
+        }
+    }
+}

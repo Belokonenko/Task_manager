@@ -1,0 +1,165 @@
+.tasks {
+    display: grid;
+    grid-template-rows: max-content max-content auto;
+    grid-column: 3/ -1;
+    grid-row: 2 / -1;
+    background-color: $color-bg-base;
+    padding: 1rem 2rem 1rem 2rem;
+    // border: 3px solid red;
+
+    overflow: auto;
+    .breadcrumbs {
+        display: flex;
+        margin-bottom: 2rem;
+
+        li {
+            margin-right: 0.5em;
+        }
+
+        .ref {
+            font-family: $font-second;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 1;
+            color: rgba(51, 61, 72, 0.46);
+            text-decoration: none;
+        }
+
+        .ref-active {
+            font-family: $font-second;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1;
+            color: $color-text-title;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.9rem;
+
+        .button-add {
+            background-color: transparent;
+            box-shadow: 0 0;
+        }
+    }
+
+    &__month-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 20em;
+        width: 100%;
+    }
+
+    &__item-add {
+        background: #f9fafb;
+        border: 1px dashed $color-users-item-add;
+        border-radius: 7px;
+    }
+    &__button-add {
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &__item-add-txt {
+        display: inline-block;
+        position: relative;
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-left: 3em;
+
+        &::before {
+            content:"";
+            position: absolute;
+            width: 2.5em;
+            height: 2.5em;
+            left: -3em; 
+            top: -0.7em;
+            background-image: url("../img/add-round-button-svgrepo-com.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // position: relative;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // font-family: $font-second;
+        // font-style: normal;
+        // font-weight: 500;
+        // font-size: 1rem;
+        // line-height: 1;
+        // text-transform: capitalize;
+        // color: $color-users-item-add;
+        // &::before {
+        //     content: url("../../img/add-round-button-svgrepo-com.svg");
+        //     margin-right: 1em;
+        //     position: relative;
+        // }
+    }
+
+    &__month-txt {
+        font-family: $font-second;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.56rem;
+        line-height: 1;
+        color: $color-text-title;
+        text-align: center;
+    }
+
+    &__years-txt {
+        font-family: $font-second;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1;
+        color: $color-text-title;
+        text-align: center;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    @import "./_radio-group/_radio-group.scss";
+
+    &__table {
+        background-color: $color-light;
+        box-shadow: 0px 3px 70px rgba(142, 156, 166, 0.1);
+        border-radius: 20px 0 0 0;
+        overflow: auto;
+        border: 1px solid blue;
+    }
+
+    @import "_table/_table.scss";
+
+    @media (max-width: 768px) {
+        grid-column: 1/ -1;
+        grid-row: 2/ -1;
+    }
+}

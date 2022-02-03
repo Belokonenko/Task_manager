@@ -1,0 +1,24 @@
+@import "_var.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    font-family: $font-first;
+    line-height: 1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+// :root {
+//     font-size: calc(0.3em + 0.5vw);
+// }

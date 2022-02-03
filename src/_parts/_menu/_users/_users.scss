@@ -1,0 +1,207 @@
+.users {
+    &__form {
+    }
+
+    &__fieldset {
+        border: 0 none;
+    }
+    &__wrap-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+
+    &__title {
+        display: inline-block;
+        position: relative;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 1.5em;
+        margin-left: 2em;
+
+        &::before {
+            content:"";
+            position: absolute;
+            width: 1.5em;
+            height: 1.5em;
+            left: -2em; 
+            bottom:0em;
+            background-image: url(../img/Users.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+    }   
+        
+        
+        
+
+    &__label {
+        font-family: $font-second;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.875rem;
+        line-height: 1;
+        color: $color-text-title;
+    }
+
+    &__checkbox-all-u {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &__checkbox-all-u + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    &__checkbox-all-u + label::after {
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 1.25em;
+        height: 1.25em;
+        top: -2px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-color: $color-light;
+        border-radius: 0.185em;
+        margin-left: 0.68em;
+        background-repeat: no-repeat;
+        background-position: 43% 50%;
+        background-size: 60% 60%;
+    }
+
+    &__checkbox-all-u:checked + label::after {
+        border-color: #0b76ef;
+        background-color: #0b76ef;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: auto max-content max-content;
+        background-color: $color-bg-users-card;
+        margin-bottom: 0.6em;
+        border-radius: 0.4em;
+    }
+
+    &__checkbox-wrap {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin: 0 0.87em;
+    }
+
+    &__item-name {
+        font-family: $font-second;
+        font-weight: bold;
+        font-size: 1rem;
+        color: #333d48;
+    }
+
+    &__item-mail {
+        font-family: $font-second;
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1em;
+        color: #333d48;
+    }
+
+    .custom-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .text-checkbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-checkbox + label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    .custom-checkbox + label::before {
+        content: "";
+        display: inline-block;
+        width: 1.25em;
+        height: 1.25em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-color: $color-light;
+        border-radius: 0.3em;
+        margin-right: 1em;
+        background-repeat: no-repeat;
+        background-position: 43% 50%;
+        background-size: 60% 60%;
+    }
+
+    .custom-checkbox:checked + label::before {
+        border-color: #0b76ef;
+        background-color: #0b76ef;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+
+    .button-user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 2.1rem;
+        height: 2.1rem;
+        margin: 0.43rem 0.43rem 0.43rem 0;
+    }
+    .button-user svg {
+    }
+    .button-user-2 svg {
+        margin-left: 2px;
+    }
+
+    &__item {
+        min-height: 3.1em;
+    }
+    
+    &__item-add {
+        line-height: 1;
+    }
+    
+    &__item-add-txt {
+
+        display: inline-block;
+        position: relative;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-left: 2em;
+        text-transform: capitalize;
+        color: $color-users-item-add;
+
+        &::before {
+            content:"";
+            position: absolute;
+            width: 1.5em;
+            height: 1.5em;
+            left: -2em; 
+            bottom:0em;
+            background-image: url("../img/plus.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__btn-add {
+        border: 1px dashed rgba(51, 61, 72, 0.4);
+        box-sizing: border-box;
+        border-radius: 7px;
+
+    }
+}

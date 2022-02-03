@@ -1,0 +1,24 @@
+@import "../_base/var";
+
+.options {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 1/ 2;
+    grid-row: 2 / -1;
+    background-color: $color-bg-main;
+    padding-bottom: 1.25rem;
+    @media (max-width: 768px) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+}
+
+.button-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.375rem;
+    height: 3.375rem;
+}
