@@ -5,6 +5,7 @@
     grid-column: 2/ 3;
     grid-row: 1 / -1;
     background-color: $color-light;
+    overflow: hidden;
 
     &__container {
         margin: 0 1.25rem;

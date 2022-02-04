@@ -81,4 +81,9 @@ $colot-text-btn-mail: #333d48;
     &__btn-text-3 {
         @include centering("../img/ics-feed.svg");
     }
+    @media (max-width: 1200px) {
+       & {
+           display: none;
+       } 
+    }
 }
