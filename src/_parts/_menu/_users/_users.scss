@@ -5,13 +5,12 @@
     &__fieldset {
         border: 0 none;
     }
+
     &__wrap-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
-
 
     &__title {
         display: inline-block;
@@ -22,22 +21,18 @@
         margin-left: 2em;
 
         &::before {
-            content:"";
+            content: "";
             position: absolute;
             width: 1.5em;
             height: 1.5em;
-            left: -2em; 
-            bottom:0em;
+            left: -2em;
+            bottom: 0em;
             background-image: url(../img/Users.svg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
         }
-        
-    }   
-        
-        
-        
+    }
 
     &__label {
         font-family: $font-second;
@@ -160,8 +155,10 @@
         height: 2.1rem;
         margin: 0.43rem 0.43rem 0.43rem 0;
     }
+
     .button-user svg {
     }
+
     .button-user-2 svg {
         margin-left: 2px;
     }
@@ -169,13 +166,12 @@
     &__item {
         min-height: 3.1em;
     }
-    
+
     &__item-add {
         line-height: 1;
     }
-    
-    &__item-add-txt {
 
+    &__item-add-txt {
         display: inline-block;
         position: relative;
         font-size: 1rem;
@@ -185,12 +181,12 @@
         color: $color-users-item-add;
 
         &::before {
-            content:"";
+            content: "";
             position: absolute;
             width: 1.5em;
             height: 1.5em;
-            left: -2em; 
-            bottom:0em;
+            left: -2em;
+            bottom: 0em;
             background-image: url("../img/plus.svg");
             background-position: center center;
             background-repeat: no-repeat;
@@ -202,6 +198,12 @@
         border: 1px dashed rgba(51, 61, 72, 0.4);
         box-sizing: border-box;
         border-radius: 7px;
+    }
 
+    @media (max-width: 1680px) {
+ 
+        &__list {
+
+        }
     }
 }

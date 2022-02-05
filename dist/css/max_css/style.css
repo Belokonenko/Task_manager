@@ -362,6 +362,10 @@ body {
   width: 100%;
 }
 
+:root {
+  font-size: calc(0.4em + 0.5vw);
+}
+
 .task-manager {
   display: grid;
   grid-template-columns: 5rem -webkit-max-content 1fr;
@@ -474,7 +478,7 @@ body {
   grid-column: 2/3;
   grid-row: 1/-1;
   background-color: #ffffff;
-  overflow: hidden;
+  overflow: auto;
 }
 .menu__container {
   margin: 0 1.25rem;
@@ -746,9 +750,26 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1680px) {
   .menu .login {
     display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .menu .login__wrap-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .menu .login__button {
+    padding: 0;
+    width: 100%;
+    height: 3em;
+  }
+  .menu .login__button:not(:last-child) {
+    margin: 0 0 1em 0;
   }
 }
 .menu .users__fieldset {
