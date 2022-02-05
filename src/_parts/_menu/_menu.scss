@@ -19,7 +19,7 @@
         align-items: center;
         min-height: 5rem;
     }
-    
+
     &__title {
         display: inline-block;
         position: relative;
@@ -28,12 +28,12 @@
         margin: 0 0 0 2em;
 
         &::before {
-            content:"";
+            content: "";
             position: absolute;
             width: 1.5em;
             height: 1.5em;
-            left: -2em; 
-            bottom:0.1em;
+            left: -2em;
+            bottom: 0.1em;
             background-image: url("../img/Calendar.svg");
             background-position: center center;
             background-repeat: no-repeat;
@@ -52,22 +52,27 @@
         margin-left: 2em;
 
         &::before {
-            content:"";
+            content: "";
             position: absolute;
             width: 1.5em;
             height: 1.5em;
-            left: -2em; 
-            bottom:0.1em;
+            left: -2em;
+            bottom: 0.1em;
             background-image: url(../img/filter.svg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
         }
     }
-    
+
     @import "./_login-mail/login-mali";
     @import "./_users/users";
 
+    @media (max-width: 1024px) {
+        & {
+            display: none;
+        }
+    }
     @media (max-width: 768px) {
         grid-column: 1/2;
         grid-row: 2 / 3;

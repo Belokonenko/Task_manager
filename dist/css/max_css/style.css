@@ -356,14 +356,15 @@ html {
   font-family: "Roboto", sans-serif;
   line-height: 1;
 }
+@media (max-width: 1680px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 body {
   height: 100%;
   width: 100%;
-}
-
-:root {
-  font-size: calc(0.4em + 0.5vw);
 }
 
 .task-manager {
@@ -752,7 +753,6 @@ body {
 }
 @media (max-width: 1680px) {
   .menu .login {
-    display: none;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -986,6 +986,11 @@ body {
   box-sizing: border-box;
   border-radius: 7px;
 }
+@media (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .menu {
     grid-column: 1/2;
@@ -1198,13 +1203,11 @@ body {
   box-shadow: 0px 3px 70px rgba(142, 156, 166, 0.1);
   border-radius: 20px 0 0 0;
   overflow: auto;
-  border: 1px solid blue;
 }
 .tasks .tasks-t {
   display: grid;
   grid-template-columns: 9em 1fr;
   grid-template-rows: 6em 1fr;
-  border: 6px solid #e0e3ea;
   border-radius: 1em;
   width: 99%;
   height: 100%;
