@@ -4,6 +4,13 @@
 @import "../_base/var";
 // --- /base ---
 
+@import"../_parts/_btn-menu/_btn-menu.scss";
+@import "../_parts/_logo/logo";
+@import "../_parts/_login/login";
+@import "../_parts/_menu/menu";
+@import "../_parts/_options/options";
+@import"../_parts/_tasks/tasks";
+
 .task-manager {
     display: grid;
     grid-template-columns: 5rem max-content 1fr;
@@ -20,18 +27,6 @@
     }
 }
 
-@import "../_parts/_logo/logo";
-@import "../_parts/_login/login";
 
-.btn-menu {
-    position: fixed;
-    top: 60px;
-    height: 2rem;
-    width: 2rem;
-    z-index: 999;
-}
 
-@import "../_parts/_menu/menu";
-@import "../_parts/_options/options";
-@import"../_parts/_tasks/tasks";
 

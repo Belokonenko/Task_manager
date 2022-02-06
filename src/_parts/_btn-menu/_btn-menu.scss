@@ -1,0 +1,40 @@
+.btn-menu {
+    position: fixed;
+    top: 5.9em;
+    height: 4rem;
+    width: 4.5rem;
+    z-index: 999;
+    background-color: $color-light;
+    box-shadow: 0px 4px 20px rgba(51, 61, 72, 0.06);
+    border-radius: 0px 0.6em 0.6em  0px;
+    @media (max-width: 768px) {
+
+    top: 15em;
+    left: 1em;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1.75em;
+        height: 1.75em;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../img/Calendar.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0.125em;
+        height: 2.8em;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: $color-notice;
+
+    }
+
+}
