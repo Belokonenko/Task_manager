@@ -12,9 +12,13 @@
     </ul>
 
     <div class="tasks__header">
-        <button class="tasks__button-add">
-            <span class="tasks__item-add-txt">Add Events</span>
-        </button>
+
+        <div style="text-align: center">
+            <a href="#openModal">
+                <span class="tasks__item-add-txt">Add Events</span>
+            </a>
+        </div>
+        @@include('_modal/_modal.html')
         <div class="tasks__month-block">
             <button class="tasks__button btn">
                 <svg
@@ -52,7 +56,5 @@
         @@include('./_radio-group/_radio-group.html')
     </div>
 
-    <div class="tasks__table">
-        @@include('_table/_table.html');
-    </div>
+    <div class="tasks__table">@@include('_table/_table.html');</div>
 </section>

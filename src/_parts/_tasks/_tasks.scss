@@ -1,3 +1,5 @@
+@import "_modal/_modal.scss";
+
 .tasks {
     display: grid;
     grid-template-rows: max-content max-content auto;
@@ -6,8 +8,8 @@
     background-color: $color-bg-base;
     padding: 1rem 2rem 1rem 2rem;
     // border: 3px solid red;
-
     overflow: auto;
+
     .breadcrumbs {
         display: flex;
         margin-bottom: 2rem;
@@ -73,32 +75,17 @@
         margin-left: 3em;
 
         &::before {
-            content:"";
+            content: "";
             position: absolute;
             width: 2.5em;
             height: 2.5em;
-            left: -3em; 
+            left: -3em;
             top: -0.7em;
             background-image: url("../img/add-round-button-svgrepo-com.svg");
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // position: relative;
         // display: flex;

@@ -1,0 +1,296 @@
+@import "../../_menu/_login-mail/login-mali";
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    // border: 1px solid red;
+    /* при отображении модального окно */
+    &__login {
+        justify-content: center;
+        margin-bottom: 0;
+        border-radius: 0 0 2em 2em;
+    }
+    &__login-title {
+        margin: 0 auto;
+    }
+
+    &:target {
+        opacity: 1;
+        pointer-events: auto;
+        overflow-y: auto;
+    }
+    /* ширина модального окна и его отступы от экрана */
+
+    &-dialog {
+        position: relative;
+        width: 40em;
+        margin: 10px;
+        border-radius: 2rem;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+        border-radius: 2rem;
+    }
+
+
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 800px;
+            margin: 30px auto;
+        }
+    }
+
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.8em 4.5em 0 4.5em;
+        // border-bottom: 1px solid #eceeef;
+    }
+
+    &__body {
+        position: relative;
+        flex: 1 1 auto;
+        padding: 0 4.5em;
+        overflow: auto;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #000000;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.5;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    /* свойства для кнопки "Закрыть" */
+    &__close {
+        position: absolute;
+        z-index: 999;
+        right: 1em;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        text-decoration: none;
+    }
+
+    /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+    &__close:focus,
+    &__close:hover {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.75;
+    }
+    &__close-img {
+        width: 1em;
+        height: 1em;
+        background-image: url(../img/modal_close-img.svg);
+        background-position: 0 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__sub-title {
+        font-size: 0.9rem;
+        line-height: 1.1;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 1.8em;
+    }
+
+    &__form {
+        display: grid;
+        row-gap: 1.8em;
+    }
+
+    &__wrap-form-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__input {
+        height: 39px;
+
+        background: #f0f2f5;
+        border: 1px solid #f0f2f5;
+        border-radius: 7px;
+        padding: 1em;
+        background-clip: padding-box;
+    }
+    &__txt {
+        width: 300px;
+    }
+    &__note {
+        height: 85px;
+    }
+    &__form-title-txt {
+        position: relative;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1;
+        color: #8e9ca6;
+        margin-left: 2em;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom:-0.1em;
+            right: 3em;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("../img/modal-pen-form-title.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__form-link-txt {
+        position: relative;
+        width: 5em;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1;
+        color: #8e9ca6;
+        margin-left: 2em;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0.2em;
+            left: -3em;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("../img/modal-link.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__form-hour-txt {
+        position: relative;
+        width: 5em;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1;
+        color: #8e9ca6;
+        margin-left: 2em;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -0.2em;
+            left: -3em;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("../../../img/modal-hour.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__form-date-txt {
+        position: relative;
+        width: 5em;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1;
+        color: #8e9ca6;
+        margin-left: 2em;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -0.1em;
+            left: -3em;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("../../../img/modal-date.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    &__form-note-txt {
+        position: relative;
+        width: 5em;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1;
+        color: #8e9ca6;
+        margin-left: 2em;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -3em;
+            bottom: -0.1em;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("../../../img/modal-note.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__wrap-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    &__btn {
+        width: 14.5em;
+        height: 3.1em;
+        border: 2px solid #3e63f6;
+        color: #3e63f6;
+        box-sizing: border-box;
+        border-radius: 8px;
+
+        transition: color 400ms ease-in;
+        transition: background-color 400ms ease-in;
+
+        &:hover {
+            color: #fff;
+            background-color: #3e63f6;
+        }
+        &--hover {
+            color: #fff;
+            background-color: #3e63f6;
+        }
+    }
+}
+
+/* свойства для блока, содержащего контент модального окна */
+
+@media (min-width: 768px) {
+    .modal-content {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* свойства для заголовка модального окна */
+/* свойства для блока, содержащего основное содержимое окна */

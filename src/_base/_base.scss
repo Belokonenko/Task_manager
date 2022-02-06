@@ -14,7 +14,10 @@ html {
     font-family: $font-first;
     line-height: 1;
     @media(max-width: 1680px) {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    @media(max-width: 1360px) {
+        font-size: 8px;
     }
 }
 
