@@ -1,5 +1,8 @@
 @import "../../_base/var";
 @import "../../_base/_elements/button";
+@import "./_calendar/calendar";
+@import "./_login-mail/login-mali";
+@import "./_users/users";
 
 .menu {
     grid-column: 2/ 3;
@@ -41,8 +44,6 @@
         }
     }
 
-    @import "./_calendar/calendar";
-
     &__filters {
         display: inline-block;
         position: relative;
@@ -65,18 +66,15 @@
         }
     }
 
-    @import "./_login-mail/login-mali";
-    @import "./_users/users";
-
     @media (max-width: 1024px) {
         & {
             display: none;
         }
-    }
-    @media (max-width: 768px) {
-        grid-column: 1/2;
-        grid-row: 2 / 3;
-        z-index: 100;
-        width: 300px;
+
+        @media (max-width: 768px) {
+            grid-column: 1/2;
+            grid-row: 2 / 3;
+            z-index: 100;
+        }
     }
 }

@@ -4,12 +4,12 @@
 @import "../_base/var";
 // --- /base ---
 
-@import"../_parts/_btn-menu/_btn-menu.scss";
+@import "../_parts/_btn-menu/_btn-menu.scss";
 @import "../_parts/_logo/logo";
 @import "../_parts/_login/login";
 @import "../_parts/_menu/menu";
 @import "../_parts/_options/options";
-@import"../_parts/_tasks/tasks";
+@import "../_parts/_tasks/tasks";
 
 .task-manager {
     display: grid;
