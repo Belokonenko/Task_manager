@@ -12,14 +12,13 @@
 @import "../_parts/_options/options";
 @import "../_parts/_tasks/tasks";
 
+@import "../_base/_elements/_scrol/_scrol";
 .task-manager {
     display: grid;
     grid-template-columns: 5rem max-content 1fr;
     grid-template-rows: 5rem auto;
     height: 100vh;
     width: 100vw;
-
-    @import "../_base/_elements/_scrol/_scrol";
 
     // @media (max-width: 768px) {
     //     grid-template-columns: 1fr max-content 1fr;
