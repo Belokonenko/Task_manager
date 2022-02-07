@@ -1,4 +1,5 @@
 @import "_var.scss";
+@import "_mixins/breakpoint";
 
 * {
     margin: 0;
@@ -13,18 +14,68 @@ html {
     font-size: 16px;
     font-family: $font-first;
     line-height: 1;
-    @media(max-width: 1680px) {
-        font-size: 12px;
-    }
-    @media(max-width: 1360px) {
-        font-size: 8px;
-    }
+    // @media(max-width: 1680px) {
+    //     font-size: 12px;
+    // }
+    // @media(max-width: 1360px) {
+    //     font-size: 8px;
+    // }
 }
 
 body {
     height: 100%;
     width: 100%;
 }
+:root {
+    font-size: 1rem;
+}
+
+
+
+
+@include extra-big-desktop {
+    //(max-width: (1920px)) {
+    :root {
+        font-size: 0.7em;
+    }
+}
+
+@include big-desktop {
+    //(max-width: (1440px)) {
+    :root {
+        font-size: 0.6em;
+    }
+}
+
+@include for-desktop {
+    //(min-width: (1200px)) {
+    :root {
+        font-size: 0.5em;
+    }
+}
+
+@include tablet {
+    //(max-width: (1024px)) {
+    :root {
+        font-size: 0.5em;
+    }
+}
+
+@include small-tablet {
+    //(max-width: (768px)) {
+    :root {
+        font-size: 0.5em;
+    }
+}
+
+@include mobile {
+    //(max-width: (576px)) {
+    :root {
+        font-size: 0.5em;
+    }
+}
+
+
 // :root {
 //     font-size: calc(0.4em + 0.5vw);
 // }

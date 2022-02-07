@@ -31,7 +31,7 @@
 
     &-dialog {
         position: relative;
-        width: 40em;
+        // width: 40em;
         margin: 10px;
         border-radius: 2rem;
     }
@@ -51,7 +51,7 @@
 
     @media (min-width: 576px) {
         .modal-dialog {
-            max-width: 800px;
+            max-width: 60em;
             margin: 30px auto;
         }
     }

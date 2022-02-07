@@ -66,15 +66,43 @@
         }
     }
 
-    @media (max-width: 1024px) {
-        & {
-            display: none;
-        }
+    // @media (max-width: 1024px) {
+    //     & {
+    //         display: none;
+    //     }
 
-        @media (max-width: 768px) {
-            grid-column: 1/2;
-            grid-row: 2 / 3;
-            z-index: 100;
-        }
+    //     @media (max-width: 768px) {
+    //         grid-column: 1/3;
+    //         grid-row: 2 / 3;
+    //         z-index: 100;
+    //     }
+    // }
+
+    // @include extra-big-desktop {
+    //     //(max-width: (1920px)) {
+    // }
+
+    // @include big-desktop {
+    //     //(max-width: (1440px)) {
+    // }
+
+    // @include for-desktop {
+    //     //(min-width: (1200px)) {
+    // }
+
+    @include tablet {
+        //(max-width: (1024px)) {
+        display: none;
     }
+
+    @include small-tablet {
+        //(max-width: (768px)) {
+        grid-column: 1/3;
+        grid-row: 2 / 3;
+        z-index: 100;
+    }
+
+    // @include mobile {
+    //     //(max-width: (576px)) {
+    // }
 }

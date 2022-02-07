@@ -43,6 +43,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1.9rem;
+        flex-wrap: wrap;
 
         .button-add {
             background-color: transparent;
@@ -145,8 +146,34 @@
 
     @import "_table/_table.scss";
 
-    @media (max-width: 768px) {
+    // @media (max-width: 768px) {
+    //     grid-column: 1/ -1;
+    //     grid-row: 2/ -1;
+    // }
+
+    // @include extra-big-desktop {
+    //     //(max-width: (1920px)) {
+    // }
+
+    // @include big-desktop {
+    //     //(max-width: (1440px)) {
+    // }
+
+    // @include for-desktop {
+    //     //(min-width: (1200px)) {
+    // }
+
+    // @include tablet {
+    //     //(max-width: (1024px)) {
+    // }
+
+    @include small-tablet {
+        //(max-width: (768px)) {
         grid-column: 1/ -1;
         grid-row: 2/ -1;
     }
+
+    // @include mobile {
+    //     //(max-width: (576px)) {
+    // }
 }
