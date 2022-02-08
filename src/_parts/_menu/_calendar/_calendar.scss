@@ -1,6 +1,6 @@
 @import "../../../_base/var";
 
-$color-bg-week:rgba(196, 196, 196, 0.59);
+$color-bg-week: rgba(196, 196, 196, 0.59);
 
 .calendar {
     display: grid;
@@ -48,20 +48,20 @@ $color-bg-week:rgba(196, 196, 196, 0.59);
             background-color: $color-bg-week;
             border-radius: 2em;
         }
-        
+
         &--dates {
             display: grid;
-            gap: 3px;
+            // gap: 3px;
             grid-template-columns: repeat(7, 1fr);
             justify-items: center;
             text-align: center;
             li {
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                // position: relative;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
 
-                // display: grid;
+                // // display: grid;
                 line-height: 1;
                 width: 2.5em;
                 height: 2.5em;
@@ -69,6 +69,18 @@ $color-bg-week:rgba(196, 196, 196, 0.59);
                 font-weight: bold;
                 background-color: transparent;
             }
+
+            li {
+                // height: 10em;
+                position: relative;
+            } /* 1 */
+            li span {
+                margin: 0;
+                position: absolute; /* 2 */
+                top: 50%; /* 3 */
+                transform: translate(-53%, -44%);
+            } /* 4 */
+
             li.prev,
             li.next {
                 color: #ccc;
