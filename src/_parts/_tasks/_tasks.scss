@@ -51,6 +51,17 @@
         }
     }
 
+    &__link-modal-window {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-decoration: none;
+        & p {
+            margin: auto;
+            line-height: 1;
+            color: #000000;
+        }
+    }
+
     &__month-block {
         display: flex;
         align-items: center;
@@ -64,28 +75,32 @@
         border: 1px dashed $color-users-item-add;
         border-radius: 7px;
     }
+
     &__button-add {
         border-color: transparent;
         background-color: transparent;
     }
-    &__item- {
+
+    &__item {
         display: inline-block;
         position: relative;
         font-size: 1rem;
         line-height: 1.4;
         margin-left: 3em;
+        height: 4em;
 
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     width: 2.5em;
-        //     height: 2.5em;
-        //     left: -3em;
-        //     background-image: url("../img/add-round-button-svgrepo-com.svg");
-        //     background-position: 0 0;
-        //     background-repeat: no-repeat;
-        //     background-size: cover;
-        // }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2.5em;
+            height: 2.5em;
+            left: -3em;
+            top: -0.5em;
+            background-image: url("../img/add-round-button-svgrepo-com.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
 
         // position: relative;
         // display: flex;
