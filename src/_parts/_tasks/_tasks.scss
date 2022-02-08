@@ -68,25 +68,24 @@
         border-color: transparent;
         background-color: transparent;
     }
-    &__item-add-txt {
+    &__item- {
         display: inline-block;
         position: relative;
         font-size: 1rem;
         line-height: 1.4;
         margin-left: 3em;
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 2.5em;
-            height: 2.5em;
-            left: -3em;
-            top: -0.7em;
-            background-image: url("../img/add-round-button-svgrepo-com.svg");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 2.5em;
+        //     height: 2.5em;
+        //     left: -3em;
+        //     background-image: url("../img/add-round-button-svgrepo-com.svg");
+        //     background-position: 0 0;
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        // }
 
         // position: relative;
         // display: flex;

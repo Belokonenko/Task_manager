@@ -1,5 +1,7 @@
 @import "../../../_base/var";
 
+$color-bg-week:rgba(196, 196, 196, 0.59);
+
 .calendar {
     display: grid;
     grid-template-rows: max-content auto;
@@ -25,7 +27,7 @@
     &__body {
         padding: 0 2rem 2.5rem 2rem;
         margin-bottom: 1.6em;
-        border-bottom: 1px solid rgba(158, 163, 169, 0.46); 
+        border-bottom: 1px solid rgba(158, 163, 169, 0.46);
         &--days {
             display: flex;
             justify-content: space-between;
@@ -42,6 +44,11 @@
                 margin: 0 1px;
             }
         }
+        .line {
+            background-color: $color-bg-week;
+            border-radius: 2em;
+        }
+        
         &--dates {
             display: grid;
             gap: 3px;
@@ -50,47 +57,60 @@
             text-align: center;
             li {
                 position: relative;
-                width: 1.5rem;
-                height: 1.5rem;
-                display: grid;
-                place-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // display: grid;
+                line-height: 1;
+                width: 2.5em;
+                height: 2.5em;
+                // place-items: center;
                 font-weight: bold;
+                background-color: transparent;
             }
             li.prev,
             li.next {
                 color: #ccc;
             }
-            li.active {
-                background: $orange;
+
+            .active {
+                background-color: #3e63f6;
+                border-radius: $radius;
                 color: $white;
-                border-radius: $radius;
             }
-            li.circle {
-                border: 2px solid;
-                border-radius: $radius;
-                span {
-                    position: absolute;
-                    top: -0.75rem;
-                    right: -0.5rem;
-                    width: 1.75rem;
-                    height: 1.75rem;
-                    font-size: 1.2rem;
-                    color: $white;
-                    border-radius: $radius;
-                }
-            }
-            .circle.orange {
-                border-color: $orange;
-                span {
-                    background: $orange;
-                }
-            }
-            .circle.purple {
-                border-color: $purple;
-                span {
-                    background: $purple;
-                }
-            }
+
+            // li.active {
+            //     background: $orange;
+            //     color: $white;
+            //     border-radius: $radius;
+            // }
+            // li.circle {
+            //     border: 2px solid;
+            //     border-radius: $radius;
+            //     span {
+            //         position: absolute;
+            //         top: -0.75rem;
+            //         right: -0.5rem;
+            //         width: 2rem;
+            //         height: 2rem;
+            //         font-size: 1.2rem;
+            //         color: $white;
+            //         border-radius: $radius;
+            //     }
+            // }
+            // .circle.orange {
+            //     border-color: $orange;
+            //     span {
+            //         background: $orange;
+            //     }
+            // }
+            // .circle.purple {
+            //     border-color: $purple;
+            //     span {
+            //         background: $purple;
+            //     }
+            // }
         }
     }
 }
