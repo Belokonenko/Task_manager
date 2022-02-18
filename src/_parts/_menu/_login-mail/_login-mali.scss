@@ -1,83 +1,94 @@
 $colot-text-btn-mail: #333d48;
 
 @mixin centering($img) {
-    display: inline-block;
-    position: relative;
-    font-size: 1rem;
-    line-height: 1.4;
-    font-weight: bold;
-    margin-left: 2em;
+  display: inline-block;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-left: 2em;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 1.5em;
-        height: 1.5em;
-        left: -2em;
-        bottom: 0.1em;
-        background-image: url($img);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    left: -2em;
+    bottom: 0.1em;
+    background-image: url($img);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .login {
-    background-color: $color-bg-base;
-    padding: 2rem 0 2rem 0;
-    margin-bottom: 3rem;
+  background-color: $color-bg-base;
+  padding: 2rem 0 2rem 0;
+  margin-bottom: 3rem;
 
-    &__form {
-    }
+  &__form {
+  }
 
-    &__fieldset {
-        border: 0 none;
-    }
+  &__fieldset {
+    border: 0 none;
+  }
 
-    &__title {
-        display: inline-block;
-        margin-bottom: 1.2rem;
-        font-size: 1.2rem;
-        font-family: $font-second;
-        font-style: normal;
-        font-weight: bold;
-        line-height: 1;
-        color: $color-text-title;
-    }
+  &__title {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-family: $font-second;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1;
+    color: $color-text-title;
+  }
 
+  &__wrap-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.66em 1.3em;
+    // height: 3.9em;
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 0.5em;
+  }
+
+  &__btn-txt {
+    font-size: 0.8rem;
+  }
+
+  &__btn-text-1 {
+    @include centering("../img/google-logo.svg");
+  }
+
+  &__btn-text-2 {
+    @include centering("../img/microsoft-logo.svg");
+  }
+
+  &__btn-text-3 {
+    @include centering("../img/ics-feed.svg");
+  }
+
+  @include mobile {
     &__wrap-btns {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+      flex-direction: column;
     }
-
     &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.66em 1.3em;
-        // height: 3.9em;
+      width: 100%;
     }
-
     &__button:not(:last-child) {
-        margin-right: 0.5em;
+      margin: 0 0 1em 0;
     }
-
-    &__btn-txt {
-        font-size: 0.8rem;
-    }
-
-    &__btn-text-1 {
-        @include centering("../img/google-logo.svg");
-    }
-
-    &__btn-text-2 {
-        @include centering("../img/microsoft-logo.svg");
-    }
-
-    &__btn-text-3 {
-        @include centering("../img/ics-feed.svg");
-    }
-
+  }
 }
