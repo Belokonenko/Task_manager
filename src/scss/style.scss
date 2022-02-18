@@ -14,6 +14,8 @@
 
 @import "../_base/_elements/_scrol/_scrol";
 .task-manager {
+    position: relative;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 5rem max-content 1fr;
     grid-template-rows: 5rem auto;
