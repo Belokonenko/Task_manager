@@ -5,6 +5,7 @@
 @import "./_users/users";
 
 .menu {
+    position: relative;
     grid-column: 2/ 3;
     grid-row: 1 / -1;
     background-color: $color-light;
